@@ -30,7 +30,7 @@ export default function Header() {
 
     {
       label: "Pricing",
-      to: "/createownyourmail",
+      to: "/about",
     },
   ];
   return (
