@@ -30,7 +30,7 @@ export default function Cottages() {
             />
             <div className="cottages__section__container__card__entry">
               <div className="cottages__section__container__card__heading">
-                Studio
+                ONE BED
               </div>
               <div className="cottages__section__container__card__subheading">
                 Cottage
@@ -45,7 +45,7 @@ export default function Cottages() {
             />
             <div className="cottages__section__container__card__entry">
               <div className="cottages__section__container__card__heading">
-                Studio
+                TWO BED
               </div>
               <div className="cottages__section__container__card__subheading">
                 Cottage

@@ -1,3 +1,5 @@
+import PngAnidealbanner from './anidealbanner.png'
+import PngAnydeallocation from './anydeallocation.png'
 import PngAvailableinventory from './availableinventory.png'
 import PngCardimgone from './cardimgone.png'
 import PngCardimgthree from './cardimgthree.png'
@@ -9,6 +11,8 @@ import SvgReact from './react.svg'
 import PngYourlocaton from './yourlocaton.png'
 
 export {
+  PngAnidealbanner,
+  PngAnydeallocation,
   PngAvailableinventory,
   PngCardimgone,
   PngCardimgthree,

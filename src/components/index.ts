@@ -1,3 +1,5 @@
+import AnidealLoaction from './AnidealLoaction.jsx'
+import Anydealentry from './Anydealentry.jsx'
 import AvailableInventory from './AvailableInventory.jsx'
 import Cottages from './Cottages.jsx'
 import Footer from './Footer.jsx'
@@ -8,6 +10,8 @@ import HomepageBanner from './HomepageBanner.jsx'
 import YourLocationMurree from './YourLocationMurree.jsx'
 
 export {
+  AnidealLoaction,
+  Anydealentry,
   AvailableInventory,
   Cottages,
   Footer,

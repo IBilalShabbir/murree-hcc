@@ -1,4 +1,5 @@
 import {
+  AnidealLoaction,
   AvailableInventory,
   Cottages,
   HolidayCountryClub,
@@ -14,9 +15,7 @@ export default function Index() {
       <HolidayCountryClub />
       <YourLocationMurree />
       <Cottages />
-      <div>
-        
-      </div>
+      <AnidealLoaction />
     </>
   );
 }
