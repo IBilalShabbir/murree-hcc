@@ -9,4 +9,536 @@ body {
   margin: 0;
   padding: 0;
   font-size: 16px;
+  background-color: var(--primary);
+}
+:root {
+  --white: #ffff;
+  --primary: #051d27;
+  --secondary: #ad925e;
+}
+
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+}
+.header__content {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0em auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em 3em;
+}
+.header__content__nav__menu {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  border: 1px solid var(--white);
+  border-radius: 5px;
+  color: var(--white);
+  margin: 0 auto;
+  background-color: transparent;
+  cursor: pointer;
+  margin-left: 0.5em;
+}
+.header__content__nav__menu:hover {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  transition: 300ms ease-in-out;
+}
+.header__active {
+  background-color: var(--primary);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+.header__content__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0em;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.header__content__logo img {
+  width: 100px;
+}
+.header__container__logo {
+  width: fit-content;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header__container__logo svg {
+  width: 35px;
+}
+.header__content__nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.header__content__nav__link {
+  position: relative;
+  text-decoration: none;
+}
+.header__content__nav__link__input {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  z-index: 1;
+  opacity: 0;
+}
+.header__active .header__content__nav__link__content:hover {
+  color: var(--white);
+}
+.header__content__nav__link__content {
+  padding: 0em 1em;
+  z-index: -1;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--white);
+}
+.header__content__nav__link__input:checked
+  ~ .header__content__nav__link__content {
+  transition: 300ms ease-in-out;
+  color: var(--secondary);
+}
+.header__content__nav__div {
+  display: flex;
+  align-items: center;
+}
+.header__content__nav__contact__us {
+  height: 35px;
+  padding: 0em 1em;
+  border-radius: 5px;
+  border: 1px solid var(--white);
+  color: var(--white);
+  background-color: transparent;
+  cursor: pointer;
+}
+.header__content__nav__contact__us:hover {
+  background-color: var(--primary);
+  color: var(--white);
+  border-color: var(--primary);
+  transition: 300ms ease-in-out;
+}
+.homepage {
+  width: 100%;
+  height: 100%;
+}
+.homepage__banner {
+  width: 100%;
+  height: 100vh;
+  max-height: 600px;
+  background-image: url("../assets/homepagebanner.png");
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px inset;
+}
+.your__dream__cottage__is__here {
+  width: 100%;
+}
+.your__dream__cottage__is__here__container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0em auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 5em 2em;
+}
+.your__dream__cottage__is__here__container__header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.your__dream__cottage__is__here__container__left {
+  flex: 1;
+  max-width: 400px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.your__dream__cottage__is__here__container__left__bg {
+  width: 170px;
+  height: 170px;
+  background-color: #ad925e;
+  border-radius: 50%;
+  z-index: 1;
+}
+.your__dream__cottage__is__here__container__left__text {
+  font-size: 35px;
+  font-weight: 600;
+  color: var(--white);
+  position: absolute;
+  max-width: 300px;
+  left: 50px;
+  z-index: 5;
+  text-transform: capitalize;
+}
+.your__dream__cottage__is__here__container__right {
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-direction: column;
+  color: var(--white);
+  padding: 0em 1em;
+}
+.your__dream__cottage__is__here__container__right__content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  max-width: 700px;
+  text-align: end;
+  font-size: 14px;
+  font-weight: 500;
+}
+.your__dream__cottage__is__here__container__right__content span {
+  font-size: 17px;
+  font-weight: 600;
+}
+.your__dream__cottage__is__here__container__bottom {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.your__dream__cottage__is__here__container__bottom img {
+  width: 100%;
+  max-width: 1200px;
+  height: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-top: -2em;
+}
+.your__dream__cottage__is__here__container__bottom__overlay {
+  position: absolute;
+  max-width: 1200px;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 2em;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+.your__dream__cottage__is__here__container__bottom__overlay__entry {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  font-weight: 600;
+  color: var(--white);
+}
+.your__dream__cottage__is__here__container__bottom__overlay__entry:first-child {
+  text-transform: uppercase;
+}
+.your__dream__cottage__is__here__container__bottom__overlay__entry span {
+  font-size: 12px;
+  font-weight: 400;
+  white-space: nowrap;
+  word-break: normal;
+  width: fit-content;
+}
+.holiday__country__club {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0em 2em;
+}
+.holiday__country__club__container {
+  width: 100%;
+  max-width: 1225px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.holiday__country__club__container__heading {
+  font-size: 35px;
+  font-weight: 600;
+  color: var(--white);
+  text-align: center;
+}
+.holiday__country__club__container__text {
+  color: var(--white);
+  font-size: 14px;
+  text-align: center;
+  max-width: 900px;
+  margin: 1em auto;
+}
+.holiday__country__club__container__bottom {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 4em;
+}
+.holiday__country__club__container__bottom__left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin-top: 0.5em;
+  max-width: 400px;
+}
+.holiday__country__club__container__bottom__left__img {
+  width: 100%;
+  max-width: 300px;
+}
+.holiday__country__club__container__bottom__right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.holiday__country__club__container__bottom__right__entry {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  background-color: #03171e;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5em;
+  margin: 0.5em;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.holiday__country__club__container__bottom__right__entry:hover {
+  background-color: var(--secondary);
+  transition: 300ms ease-in-out;
+}
+
+.holiday__country__club__container__bottom__right__entry__svg {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--secondary);
+}
+.holiday__country__club__container__bottom__right__entry:hover
+  .holiday__country__club__container__bottom__right__entry__svg {
+  color: var(--primary);
+  transition: 300ms ease-in-out;
+}
+.holiday__country__club__container__bottom__right__entry__text {
+  text-align: center;
+  color: #8f8f8f;
+  font-size: 14px;
+  width: 100px;
+}
+.holiday__country__club__container__bottom__right__entry:hover
+  .holiday__country__club__container__bottom__right__entry__text {
+  color: var(--primary);
+  transition: 300ms ease-in-out;
+}
+.your__location__in__murree {
+  width: 100%;
+  padding: 5em 2em;
+  padding-bottom: 0em;
+  position: relative;
+}
+.your__location__in__murree__left__bg {
+  width: 100%;
+  max-width: 450px;
+  height: 100%;
+  max-height: 450px;
+  background-color: var(--secondary);
+  border-radius: 50%;
+  position: absolute;
+  left: -170px;
+  top: 60px;
+  z-index: -1;
+}
+.your__location__in__murree__container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.your__location__in__murree__container__img {
+  width: 100%;
+  height: 100%;
+  max-height: 400px;
+  min-height: 400px;
+  border-radius: 10px;
+}
+.your__location__in__murree__container__img__heading {
+  position: absolute;
+  font-size: 35px;
+  font-weight: 500;
+  color: var(--white);
+  top: 70px;
+  text-transform: uppercase;
+}
+.your__location__in__murree__container__img__heading span {
+  font-weight: 600;
+}
+.cottages__section {
+  width: 100%;
+  height: 100%;
+}
+.cottages__section__container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 5em 2em;
+}
+.cottages__section__container__heading {
+  font-size: 35px;
+  font-weight: 600;
+  color: var(--white);
+  text-align: center;
+}
+@media (max-width: 1440px) {
+  .header__content {
+    padding: 1em 2em;
+  }
+}
+@media (max-width: 1000px) {
+  .header__content__nav__menu {
+    display: flex;
+  }
+  .header__content__nav {
+    width: 180px;
+    position: absolute;
+    top: 5em;
+    right: 2em;
+    flex-direction: column;
+    padding: 2em 1em;
+    border-radius: 5px;
+    background-color: var(--white);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .header__content__nav__link__content {
+    color: black;
+  }
+  .header__content__nav__link {
+    margin-left: 0em;
+    width: 100%;
+    margin-bottom: 1em;
+  }
+  .header__content__nav__link:last-child {
+    margin-bottom: 0em;
+  }
+  .your__dream__cottage__is__here__container__header {
+    flex-direction: column;
+  }
+  .your__dream__cottage__is__here__container__left {
+    max-width: 100%;
+    width: 100%;
+    justify-content: center;
+  }
+  .your__dream__cottage__is__here__container__left__text {
+    left: auto;
+  }
+  .your__dream__cottage__is__here__container__right {
+    width: 100%;
+    margin: 2em auto;
+    align-items: center;
+  }
+  .your__dream__cottage__is__here__container__right__content {
+    max-width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+  .your__dream__cottage__is__here__container__bottom img {
+    margin-top: 0em;
+  }
+  .holiday__country__club__container__bottom {
+    flex-direction: column;
+  }
+  .holiday__country__club__container__bottom__left {
+    max-width: 100%;
+    justify-content: center;
+    margin-bottom: 1em;
+  }
+  .your__location__in__murree__left__bg {
+    display: none;
+  }
+  .your__location__in__murree__container__img {
+    max-height: 100%;
+    min-height: 250px;
+    object-fit: cover;
+  }
+  .your__dream__cottage__is__here__container__bottom img {
+    min-height: 250px;
+  }
+}
+@media (max-width: 800px) {
+  .your__dream__cottage__is__here__container__bottom__overlay__entry {
+    font-size: 20px;
+  }
+  .your__location__in__murree__container__img__heading {
+    font-size: 25px;
+    text-align: center;
+  }
+}
+@media (max-width: 600px) {
+  .your__dream__cottage__is__here__container__bottom__overlay__entry {
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  .your__dream__cottage__is__here__container__bottom__overlay {
+    padding: 2em 1em 1em;
+  }
+  .your__location__in__murree__container__img__heading {
+    font-size: 20px;
+    padding: 0em 2em;
+  }
+}
+@media (max-width: 500px) {
+  .your__dream__cottage__is__here__container__bottom img {
+    max-width: 100%;
+  }
+  .your__dream__cottage__is__here__container {
+    padding: 5em 0em;
+  }
+  .your__location__in__murree {
+    padding: 5em 0em;
+  }
 }
