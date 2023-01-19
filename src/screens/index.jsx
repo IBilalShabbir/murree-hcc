@@ -1,5 +1,6 @@
 import {
   AvailableInventory,
+  Cottages,
   HolidayCountryClub,
   HomepageBanner,
   YourLocationMurree,
@@ -12,10 +13,9 @@ export default function Index() {
       <AvailableInventory />
       <HolidayCountryClub />
       <YourLocationMurree />
-      <div className="cottages__section">
-        <div className="cottages__section__container">
-          <div className="cottages__section__container__heading">Cottages</div>
-        </div>
+      <Cottages />
+      <div>
+        
       </div>
     </>
   );
