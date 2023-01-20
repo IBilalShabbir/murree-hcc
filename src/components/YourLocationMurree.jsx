@@ -3,7 +3,7 @@ import { PngYourlocaton } from "../assets";
 
 export default function YourLocationMurree() {
   return (
-    <div className="your__location__in__murree">
+    <div className="your__location__in__murree" id="location__section">
       <div className="your__location__in__murree__left__bg"></div>
       <div className="your__location__in__murree__container">
         <img

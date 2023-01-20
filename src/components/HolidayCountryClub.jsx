@@ -3,7 +3,7 @@ import Holidaycountryentry from "./Holidaycountryentry";
 
 export default function HolidayCountryClub() {
   return (
-    <div className="holiday__country__club">
+    <div className="holiday__country__club" id="inventory__section">
       <div className="holiday__country__club__container">
         <div className="holiday__country__club__container__heading">
           Why invest in holiday country club?

@@ -1,14 +1,13 @@
 import { useEffect, useState } from "react";
-import { Menu, X } from "react-feather";
-import { useNavigate } from "react-router-dom";
+import { X, Menu } from "react-feather";
 import { PngLogo } from "../assets";
-import { Link } from "../router";
+import Navlink from "./Navlink";
 
 export default function Header() {
   const [checked, setIsChecked] = useState("Home");
   const [isNavOpen, setIsNavOpen] = useState(true);
   const [isScrolling, setIsScrolling] = useState(false);
-  const navigate = useNavigate();
+
   function changeNav() {
     setIsNavOpen(window.innerWidth > 1000);
   }
@@ -23,75 +22,54 @@ export default function Header() {
       }
     });
   }, []);
-
   const navLinks = [
     {
       label: "Home",
-      to: "/",
+      scrollTo: "home",
+      defaultChecked: true,
     },
     {
       label: "Features",
-      to: "/features",
+      scrollTo: "features",
     },
     {
       label: "Inventory",
-      to: "/inventory",
+      scrollTo: "inventory",
     },
     {
       label: "Location",
-      to: "/location",
+      scrollTo: "location",
     },
   ];
-
   return (
     <div className={isScrolling ? "header header__active" : "header"}>
       <div className="header__content">
         <button
           onClick={() => {
-            navigate("/");
+            document.getElementById("home").checked = true;
             window.scrollTo({ top: 0, behavior: "smooth" });
           }}
           className="header__content__logo"
         >
           <img src={PngLogo} alt="logo" />
         </button>
+
         {isNavOpen && (
           <div className="header__content__nav">
             {navLinks.map((link) => (
-              <Link
-                className="header__content__nav__link"
+              <Navlink
                 key={link.label}
-                to={link.to}
-                checked={checked}
+                scrollTo={link.scrollTo}
                 label={link.label}
-              >
-                <input
-                  type="radio"
-                  name="header__content__nav__link"
-                  checked={checked === link.label}
-                  readOnly
-                  to={link.to}
-                  className="header__content__nav__link__input"
-                  onClick={() => {
-                    setIsChecked(link.label);
-                    document.getElementById("home");
-                    if (window.innerWidth < 1000) {
-                      setIsNavOpen(false);
-                    }
-                  }}
-                />
-                <div className="header__content__nav__link__content">
-                  {link.label}
-                </div>
-              </Link>
+                checked={checked}
+                setIsChecked={setIsChecked}
+                setIsNavOpen={setIsNavOpen}
+              />
             ))}
           </div>
         )}
-
-        <div className="header__content__nav__div">
-          <button className="header__content__nav__contact__us">
-            Contact us
-          </button>
+        <div className="header__content__buttons">
+          <button className="header__content__contact__us">Contact Us</button>
           <button
             className="header__content__nav__menu"
             onClick={() => {

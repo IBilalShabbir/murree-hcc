@@ -7,6 +7,7 @@ import Header from './Header.jsx'
 import HolidayCountryClub from './HolidayCountryClub.jsx'
 import Holidaycountryentry from './Holidaycountryentry.jsx'
 import HomepageBanner from './HomepageBanner.jsx'
+import Navlink from './Navlink.jsx'
 import YourLocationMurree from './YourLocationMurree.jsx'
 
 export {
@@ -19,5 +20,6 @@ export {
   HolidayCountryClub,
   Holidaycountryentry,
   HomepageBanner,
+  Navlink,
   YourLocationMurree
 }

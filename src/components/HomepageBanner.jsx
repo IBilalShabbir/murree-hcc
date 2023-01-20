@@ -21,7 +21,7 @@ export default function HomepageBanner() {
   }, []);
   return (
     <section
-      id="home"
+      id="home__section"
       className="homepage"
       style={{
         fontFamily: "system-ui, sans-serif",

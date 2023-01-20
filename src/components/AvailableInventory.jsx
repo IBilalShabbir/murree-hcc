@@ -2,7 +2,7 @@ import { PngAvailableinventory } from "../assets";
 
 export default function AvailableInventory() {
   return (
-    <div className="your__dream__cottage__is__here">
+    <div className="your__dream__cottage__is__here" id="features__section">
       <div className="your__dream__cottage__is__here__container">
         <div className="your__dream__cottage__is__here__container__header">
           <div className="your__dream__cottage__is__here__container__left">
