@@ -42,7 +42,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 1em 3em;
-  box-shadow: rgba(9, 9, 16, 0.25) 0px 30px 50px -12px inset,
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 50px -12px inset,
     rgba(0, 0, 0, 0.3) 0px 18px 0px -18px inset;
 }
 .header__content__nav__menu {
@@ -152,11 +152,12 @@ body {
 .homepage {
   width: 100%;
   height: 100%;
+  position: relative;
 }
 .homepage__banner {
   width: 100%;
   height: 100vh;
-  max-height: 600px;
+  max-height: 700px;
   background-size: cover;
   display: flex;
   align-items: center;
@@ -167,6 +168,59 @@ body {
   height: 100%;
   background-size: cover;
   box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px inset;
+}
+.homepage__overlay__data {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+.homepage__overlay__data__container {
+  padding: 2em 2em;
+  backdrop-filter: blur(20px);
+  border-radius: 10px;
+  max-width: 650px;
+}
+.homepage__overlay__data__container__heading {
+  font-size: 35px;
+  font-weight: 600;
+  color: var(--white);
+  text-align: center;
+  text-transform: uppercase;
+}
+.homepage__overlay__data__container__heading__text {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--white);
+  text-align: center;
+  margin-top: 0.5em;
+}
+.homepage__overlay__data__container__button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.homepage__overlay__data__container__button__btn {
+  height: 35px;
+  padding: 0em 1em;
+  border-radius: 5px;
+  border: 1px solid var(--white);
+  color: var(--white);
+  background-color: transparent;
+  cursor: pointer;
+  margin-top: 1em;
+}
+.homepage__overlay__data__container__button__btn:hover {
+  background-color: var(--primary);
+  color: var(--white);
+  border-color: var(--primary);
+  transition: 300ms ease-in-out;
 }
 .your__dream__cottage__is__here {
   width: 100%;
@@ -759,6 +813,12 @@ body {
     width: 100%;
     margin-bottom: 1em;
   }
+  .homepage__overlay__data__container__heading {
+    font-size: 25px;
+  }
+  .homepage__overlay__data__container__heading__text {
+    font-size: 13px;
+  }
   .header__content__nav__link:last-child {
     margin-bottom: 0em;
   }
@@ -854,6 +914,9 @@ body {
   .footer__container__bottom__middle__link:last-child {
     margin-left: -6px;
   }
+  .homepage__overlay__data__container {
+    max-width: calc(100% - 1em);
+  }
 }
 @media (max-width: 600px) {
   .your__dream__cottage__is__here__container__bottom__overlay__entry {
@@ -887,5 +950,11 @@ body {
   }
   .anydeal__location__overlay__bottom__container__entry {
     width: 100%;
+  }
+  .homepage__overlay__data__container {
+    padding: 2em 1em;
+  }
+  .homepage__overlay__data__container__heading {
+    font-size: 20px;
   }
 }

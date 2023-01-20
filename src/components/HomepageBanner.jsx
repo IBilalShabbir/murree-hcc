@@ -20,7 +20,8 @@ export default function HomepageBanner() {
     window.addEventListener("resize", changeSlidesPerView);
   }, []);
   return (
-    <div
+    <section
+      id="home"
       className="homepage"
       style={{
         fontFamily: "system-ui, sans-serif",
@@ -75,6 +76,23 @@ export default function HomepageBanner() {
           </div>
         </SwiperSlide>
       </Swiper>
-    </div>
+      <div className="homepage__overlay__data">
+        <div className="homepage__overlay__data__container">
+          <div className="homepage__overlay__data__container__heading">
+            Most luxury resorts for more discerning Customers
+          </div>
+          <div className="homepage__overlay__data__container__heading__text">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s,
+          </div>
+          <div className="homepage__overlay__data__container__button">
+            <button className="homepage__overlay__data__container__button__btn">
+              Contact Us
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }

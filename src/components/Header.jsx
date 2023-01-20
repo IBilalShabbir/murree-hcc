@@ -74,6 +74,7 @@ export default function Header() {
                   className="header__content__nav__link__input"
                   onClick={() => {
                     setIsChecked(link.label);
+                    document.getElementById("home");
                     if (window.innerWidth < 1000) {
                       setIsNavOpen(false);
                     }
