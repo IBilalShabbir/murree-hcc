@@ -1,4 +1,3 @@
-import React from "react";
 import { PngCardimgone, PngCardimgthree, PngCardimgtwo } from "../assets";
 
 export default function Cottages() {

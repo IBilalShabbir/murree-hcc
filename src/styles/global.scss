@@ -16,7 +16,18 @@ body {
   --primary: #051d27;
   --secondary: #ad925e;
 }
-
+::-webkit-scrollbar {
+  width: 0.5em;
+  width: 6px;
+  height: 5px;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: var(--secondary);
+  border-radius: 50px;
+}
+*::-webkit-scrollbar-track {
+  background-color: var(--primary);
+}
 .header {
   width: 100%;
   position: fixed;
@@ -579,6 +590,132 @@ body {
   font-size: 13px;
   color: var(--white);
 }
+.footer {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-top: 7em;
+  border-top: 5px solid var(--secondary);
+}
+.footer__img {
+  width: 100%;
+  max-width: 250px;
+  margin-left: -8em;
+}
+.footer__container {
+  width: 100%;
+  height: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-left: 8em;
+}
+.footer__container__top_img {
+  width: 150px;
+  height: 75px;
+}
+.footer__container__heading {
+  font-size: 35px;
+  font-weight: 500;
+  color: var(--white);
+  text-transform: uppercase;
+  margin-top: 1em;
+  text-transform: uppercase;
+  text-align: center;
+}
+.footer__container__text {
+  max-width: 800px;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--white);
+  text-align: center;
+  margin-top: 1em;
+}
+.footer__container__btn__entry {
+  width: 100%;
+  margin-top: 1em;
+  display: flex;
+  justify-content: center;
+}
+.footer__container__btn {
+  padding: 0em 3em;
+  height: 38px;
+  margin-top: 1em;
+  background-color: transparent;
+  color: var(--white);
+  border-radius: 5px;
+  border: 1px solid var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.footer__container__btn:hover {
+  background-color: var(--white);
+  color: var(--primary);
+  transition: 300ms ease-in-out;
+}
+.footer__container__btn__entry__hr {
+  width: calc(100% - 2em);
+  height: 1px;
+  background-color: #878a8c;
+  margin: 2em 0em;
+  margin-bottom: 1em;
+}
+.footer__container__bottom {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0em 2em;
+}
+.footer__container__bottom__left {
+  min-width: 150px;
+}
+.footer__container__bottom__left__img {
+  width: 100px;
+}
+.footer__container__bottom__middle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer__container__bottom__middle__link {
+  margin: 0em 1em;
+  text-decoration: none;
+  color: var(--white);
+}
+.footer__container__bottom__right {
+  display: flex;
+  align-items: center;
+}
+.footer__container__bottom__right__entry {
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-right: 1em;
+}
+.footer__container__bottom__right__entry:last-child {
+  margin-right: 0em;
+}
+.footer__container__bottom__right__entry svg {
+  width: 20px;
+  height: 20px;
+  color: var(--white);
+  fill: var(--primary);
+}
 @media (max-width: 1440px) {
   .header__content {
     padding: 1em 2em;
@@ -659,6 +796,20 @@ body {
   .your__dream__cottage__is__here__container__bottom img {
     min-height: 250px;
   }
+  .footer__img {
+    display: none;
+  }
+  .footer__container {
+    padding-left: 0em;
+    height: auto;
+    padding-top: 5em;
+  }
+  .footer__container__bottom {
+    padding: 0em 2em;
+  }
+  .footer__container__text {
+    padding: 0em 2em;
+  }
 }
 @media (max-width: 800px) {
   .your__dream__cottage__is__here__container__bottom__overlay__entry {
@@ -667,6 +818,32 @@ body {
   .your__location__in__murree__container__img__heading {
     font-size: 25px;
     text-align: center;
+  }
+  .footer__container__bottom__left {
+    min-width: 100px;
+  }
+}
+@media (max-width: 700px) {
+  .footer__container__bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .footer__container__bottom__left {
+    margin: 2em 0em;
+  }
+  .footer__container__bottom__middle {
+    flex-direction: column;
+    margin-bottom: 1em;
+  }
+  .footer__container__bottom__middle__link {
+    margin: 0em 0em;
+    margin-bottom: 1em;
+  }
+  .footer__container__bottom__right {
+    margin: 1em 0em;
+  }
+  .footer__container__bottom__middle__link:last-child {
+    margin-left: -6px;
   }
 }
 @media (max-width: 600px) {
