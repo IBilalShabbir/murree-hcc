@@ -23,6 +23,7 @@ export default function Header() {
       }
     });
   }, []);
+
   const navLinks = [
     {
       label: "Home",
@@ -41,6 +42,7 @@ export default function Header() {
       to: "/location",
     },
   ];
+
   return (
     <div className={isScrolling ? "header header__active" : "header"}>
       <div className="header__content">
