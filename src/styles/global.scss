@@ -1,9 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Prata&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;1,100;1,300;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,500;1,200;1,300;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700&display=swap");
 *,
 *::after,
 *::before {
   box-sizing: border-box;
   scroll-behavior: smooth;
-  font-family: sans-serif; // replace this with font family
+  font-family: "Plus Jakarta Sans", sans-serif; // replace this with font family
 }
 body {
   margin: 0;
@@ -38,6 +43,7 @@ body {
 }
 .header__active {
   background-color: var(--primary);
+  box-shadow: none;
 }
 .header__content {
   width: 100%;
@@ -558,6 +564,8 @@ body {
   align-items: center;
   justify-content: center;
   position: relative;
+  margin-bottom: 3em;
+  border-bottom: 5px solid var(--secondary);
 }
 .anideal__location__img {
   width: 100%;
@@ -642,7 +650,6 @@ body {
   display: flex;
   align-items: center;
   padding-top: 7em;
-  border-top: 5px solid var(--secondary);
 }
 .footer__img {
   width: 100%;
@@ -854,7 +861,6 @@ body {
   .footer__container {
     padding-left: 0em;
     height: auto;
-    padding-top: 5em;
   }
   .footer__container__bottom {
     padding: 0em 2em;

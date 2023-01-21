@@ -6,15 +6,15 @@ export default function Footer() {
   const navLinks = [
     {
       label: "Features",
-      to: "/features",
+      to: "/",
     },
     {
       label: "Inventory",
-      to: "/inventory",
+      to: "/",
     },
     {
       label: "Location",
-      to: "/location",
+      to: "/",
     },
   ];
   return (
