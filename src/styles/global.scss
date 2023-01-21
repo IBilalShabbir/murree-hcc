@@ -91,6 +91,12 @@ body {
   color: var(--white);
   cursor: pointer;
 }
+.header__active .header__content__contact__us:hover {
+  background-color: var(--white);
+  color: var(--primary);
+  border-color: var(--white);
+  transition: 300ms ease-in-out;
+}
 .header__content__contact__us:hover {
   background-color: var(--primary);
   transition: 300ms ease-in-out;
@@ -198,20 +204,24 @@ body {
 }
 .homepage__overlay__data__container__button__btn {
   height: 35px;
-  padding: 0em 1em;
+  padding: 0em 2em;
   border-radius: 5px;
   border: 1px solid var(--white);
   color: var(--white);
   background-color: transparent;
   cursor: pointer;
   margin-top: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .homepage__overlay__data__container__button__btn:hover {
-  background-color: var(--primary);
-  color: var(--white);
-  border-color: var(--primary);
+  background-color: var(--white);
+  color: var(--primary);
+  border-color: var(--white);
   transition: 300ms ease-in-out;
 }
+
 .your__dream__cottage__is__here {
   width: 100%;
 }
@@ -699,7 +709,7 @@ body {
   justify-content: center;
 }
 .footer__container__btn {
-  padding: 0em 3em;
+  padding: 0em 2em;
   height: 38px;
   margin-top: 1em;
   background-color: transparent;
@@ -769,7 +779,10 @@ body {
   color: var(--white);
   fill: var(--primary);
 }
-
+.footer__container__bottom__right__entry:hover {
+  background-color: var(--white);
+  transition: 300ms ease-in-out;
+}
 @media (max-width: 1400px) {
   .cottages__section__container__entries {
     justify-content: space-around;
