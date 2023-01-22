@@ -31,7 +31,7 @@ export default function AnidealLoaction() {
           </div>
         </div>
         <div className="anydeal__location__overlay__bottom">
-          <Fade top distance="100%">
+          <Fade bottom distance="100%">
             <div className="anydeal__location__overlay__bottom__container">
               <Anydealentry
                 svg={
