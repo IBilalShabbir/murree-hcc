@@ -1,5 +1,6 @@
 import React from "react";
 import { PngYourlocaton } from "../assets";
+import Fade from "react-reveal/Fade";
 
 export default function YourLocationMurree() {
   return (
@@ -11,9 +12,12 @@ export default function YourLocationMurree() {
           alt="yourlocaton"
           className="your__location__in__murree__container__img"
         />
-        <div className="your__location__in__murree__container__img__heading">
-          your new location in <span>MURREE!</span>
-        </div>
+
+        <Fade left>
+          <div className="your__location__in__murree__container__img__heading">
+            your new location in <span>MURREE!</span>
+          </div>
+        </Fade>
       </div>
     </div>
   );

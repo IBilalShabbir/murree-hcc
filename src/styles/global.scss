@@ -957,3 +957,12 @@ body {
     font-size: 20px;
   }
 }
+@media (max-width: 420px) {
+  .holiday__country__club__container__bottom__right {
+    justify-content: space-between;
+  }
+  .holiday__country__club__container__bottom__right__entry {
+    width: fit-content;
+    flex: 1;
+  }
+}

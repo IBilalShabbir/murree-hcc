@@ -1,6 +1,7 @@
 import { Facebook, Instagram, Linkedin, Youtube } from "react-feather";
 import { PngHolidaycountry, PngLogo } from "../assets";
 import { Link } from "../router";
+import Fade from "react-reveal/Fade";
 
 export default function Footer() {
   const navLinks = [
@@ -19,22 +20,36 @@ export default function Footer() {
   ];
   return (
     <div className="footer">
-      <img
-        src={PngHolidaycountry}
-        alt="holidaycountry"
-        className="footer__img"
-      />
+      <Fade left distance="30%">
+        <img
+          src={PngHolidaycountry}
+          alt="holidaycountry"
+          className="footer__img"
+        />
+      </Fade>
       <div className="footer__container">
-        <img src={PngLogo} alt="logo" className="footer__container__top_img" />
-        <div className="footer__container__heading">Want to know more?</div>
-        <div className="footer__container__text">
-          Dream Home is a gated community with a great location. Located
-          downtown, you’re within walking distance of Parks, and the best
-          shopping, dining and entertainment Getting around is a breeze, with
-          easy access to freeways, buses and trolleys.
-        </div>
+        <Fade top distance="30%">
+          <img
+            src={PngLogo}
+            alt="logo"
+            className="footer__container__top_img"
+          />
+        </Fade>
+        <Fade left distance="30%">
+          <div className="footer__container__heading">Want to know more?</div>
+        </Fade>
+        <Fade right distance="30%">
+          <div className="footer__container__text">
+            Dream Home is a gated community with a great location. Located
+            downtown, you’re within walking distance of Parks, and the best
+            shopping, dining and entertainment Getting around is a breeze, with
+            easy access to freeways, buses and trolleys.
+          </div>
+        </Fade>
         <div className="footer__container__btn__entry">
-          <button className="footer__container__btn">Get Started</button>
+          <Fade bottom distance="100%">
+            <button className="footer__container__btn">Get Started</button>
+          </Fade>
         </div>
         <div className="footer__container__btn__entry__hr"></div>
         <div className="footer__container__bottom">
