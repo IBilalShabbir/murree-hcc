@@ -38,8 +38,8 @@ body {
   top: 0px;
   z-index: 9999;
   width: 100%;
-  box-shadow: rgba(50, 50, 93, 0.3) 5px 68px 31px -20px inset,
-    rgba(0, 0, 0, 0.3) 0px 65px 36px -18px inset;
+  box-shadow: rgba(50, 50, 93, 0.2) 5px 68px 31px -20px inset,
+    rgba(0, 0, 0, 0.2) 0px 65px 36px -18px inset;
 }
 .header__active {
   background-color: var(--primary);
@@ -191,7 +191,7 @@ body {
 }
 .homepage__overlay__data__container {
   padding: 2em 2em;
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(10px);
   border-radius: 10px;
   max-width: 650px;
 }
@@ -564,7 +564,7 @@ body {
   justify-content: flex-end;
   align-items: flex-start;
   flex-direction: column;
-  box-shadow: rgba(19, 19, 19, 0.6) 0px -150px 40px -15px inset;
+  box-shadow: rgba(19, 19, 19, 0.8) 0px -150px 40px -15px inset;
   padding: 1em;
   transition: 300ms ease-in-out;
   border-radius: 25px;
@@ -655,8 +655,20 @@ body {
 }
 .anydeal__location__overlay__bottom__container__entry {
   width: 150px;
-  height: 130px;
+  height: fit-content;
+  padding: 1em;
+  margin: 0.5em 0.5em;
   text-align: center;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  flex-direction: column;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+.anydeal__location__overlay__bottom__container__entry:hover {
+  border-color: var(--secondary);
+  transition: 300ms ease-in-out;
 }
 .anydeal__location__overlay__bottom__container__entry svg {
   width: 50px;
@@ -950,6 +962,12 @@ body {
   }
   .header__content__nav {
     width: calc(100% - 4em);
+  }
+  .holiday__country__club__container__bottom__left__img {
+    display: none;
+  }
+  .holiday__country__club__container__bottom {
+    margin-top: 0em;
   }
 }
 @media (max-width: 500px) {
