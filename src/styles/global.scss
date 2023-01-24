@@ -38,7 +38,7 @@ body {
   top: 0px;
   z-index: 9999;
   width: 100%;
-  box-shadow: rgba(50, 50, 93, 0.8) 5px 68px 31px -20px inset,
+  box-shadow: rgba(50, 50, 93, 0.3) 5px 68px 31px -20px inset,
     rgba(0, 0, 0, 0.3) 0px 65px 36px -18px inset;
 }
 .header__active {
@@ -118,11 +118,13 @@ body {
 .header__content__nav__link__input:hover
   ~ .header__content__nav__link__content {
   color: var(--primary);
+  transition: 300ms ease-in-out;
 }
 .header__active
   .header__content__nav__link__input:hover
   ~ .header__content__nav__link__content {
   color: var(--secondary);
+  transition: 300ms ease-in-out;
 }
 .header__content__nav__contact__us {
   height: 35px;
@@ -214,8 +216,8 @@ body {
   align-items: center;
 }
 .homepage__overlay__data__container__button__btn {
-  height: 35px;
-  padding: 0em 2em;
+  height: 37px;
+  padding: 0em 1em;
   border-radius: 5px;
   border: 1px solid var(--white);
   color: var(--white);
