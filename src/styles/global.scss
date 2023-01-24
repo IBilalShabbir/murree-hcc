@@ -815,6 +815,183 @@ body {
   background-color: var(--white);
   transition: 300ms ease-in-out;
 }
+.contact__us__pop__up {
+  height: 100%;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.contact__us__pop__up__overlay {
+  position: fixed;
+  z-index: 9999;
+  top: 0px;
+  left: 0px;
+  background-color: rgba(31, 31, 31, 0.6);
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2em;
+}
+.contact__us__pop__up__card {
+  height: fit-content;
+  max-height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0em 2em;
+  width: calc(100% - 2em);
+  padding: 2em;
+  background-color: var(--primary);
+  border-radius: 8px;
+}
+.contact__us__pop__up__overlay__card__close {
+  width: 100%;
+  z-index: 999;
+  display: flex;
+  justify-content: end;
+  position: relative;
+}
+.contact__us__pop__up__overlay__card__close__entry {
+  width: 36px;
+  height: 36px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secondary);
+  border-radius: 50px;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+.contact__us__pop__up__overlay__card__close__entry:hover {
+  background-color: var(--primary);
+  border: 1px solid var(--secondary);
+  transition: 300ms ease-in-out;
+}
+.share__pop__up__overlay__card__text {
+  font-size: 18px;
+  text-align: center;
+  color: black;
+  width: 100%;
+  font-weight: 600;
+}
+.contact__us__pop__up__card__middle {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.contact__us__pop__up__card__middle img {
+  width: 100px;
+  margin-bottom: 1em;
+}
+.contact__us__pop__up__card__middle__text {
+  width: 100%;
+  max-width: 600px;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--white);
+  text-align: center;
+  margin-bottom: 0.2em;
+}
+.contact__us__pop__up__card__middle__text__detail {
+  width: 100%;
+  max-width: 600px;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--secondary);
+  text-align: center;
+}
+
+.contact__us__pop__up__card__middle__text__form {
+  width: 100%;
+  margin-top: 2em;
+}
+.contact__us__pop__up__card__middle__text__form__entry {
+  width: 100%;
+  position: relative;
+}
+.contact__us__pop__up__card__middle__text__form__entry__input {
+  width: 100%;
+  height: 40px;
+  padding: 0em 1em;
+  border: 1px solid var(--secondary);
+  color: var(--white);
+  background-color: transparent;
+  border-radius: 8px;
+  outline: 1px solid transparent;
+  font-size: 12px;
+  margin-bottom: 1.5em;
+}
+.contact__us__pop__up__card__middle__text__form__entry__input:focus {
+  outline: 1px solid var(--secondary);
+  transition: 300ms ease-in-out;
+}
+.contact__us__pop__up__card__middle__text__form__entry__input:hover {
+  border-color: var(--secondary);
+  transition: 300ms ease-in-out;
+}
+.contact__us__pop__up__card__middle__text__form__entry__input::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--secondary);
+}
+.contact__us__pop__up__card__middle__text__form__entry__input__error {
+  position: absolute;
+  bottom: -25px;
+  font-size: 12px;
+  color: red;
+  left: 10px;
+}
+.contact__us__pop__up__card__middle__text__form__area {
+  width: 100%;
+  height: 100%;
+  min-height: 100px;
+  padding: 1em 1em;
+  border: 1px solid var(--secondary);
+  color: var(--white);
+  background-color: transparent;
+  border-radius: 8px;
+  outline: 1px solid transparent;
+  font-size: 12px;
+  margin-bottom: 1.5em;
+  resize: none;
+}
+.contact__us__pop__up__card__middle__text__form__area:focus {
+  outline: 1px solid var(--secondary);
+  transition: 300ms ease-in-out;
+}
+.contact__us__pop__up__card__middle__text__form__area:hover {
+  border-color: var(--secondary);
+  transition: 300ms ease-in-out;
+}
+.contact__us__pop__up__card__middle__text__form__entry__submit {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact__us__pop__up__card__middle__text__form__entry__submit__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0em 2em;
+  border-radius: 8px;
+  border: 1px solid var(--secondary);
+  background-color: var(--secondary);
+  color: var(--white);
+  cursor: pointer;
+  height: 37px;
+}
+.contact__us__pop__up__card__middle__text__form__entry__submit__btn:hover {
+  background-color: var(--primary);
+  color: var(--secondary);
+  transition: 300ms ease-in-out;
+}
 @media (max-width: 1400px) {
   .cottages__section__container__entries {
     justify-content: space-around;
@@ -929,6 +1106,13 @@ body {
   .footer__container__bottom__left {
     min-width: 100px;
   }
+  .contact__us__pop__up__overlay {
+    padding: 2em 0.5em;
+  }
+  .contact__us__pop__up__card {
+    margin: 0em 0em;
+    width: calc(100% - 0em);
+  }
 }
 @media (max-width: 700px) {
   .footer__container__bottom {
@@ -974,6 +1158,16 @@ body {
   }
   .holiday__country__club__container__bottom {
     margin-top: 0em;
+  }
+  .contact__us__pop__up__card__middle__text {
+    font-size: 12px;
+  }
+  .contact__us__pop__up__card__middle__text__detail {
+    font-size: 12px;
+  }
+
+  .contact__us__pop__up__card {
+    padding: 1em;
   }
 }
 @media (max-width: 500px) {
